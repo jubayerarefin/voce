@@ -1,7 +1,7 @@
 /************************************************************************
 * Voce                                                                  *
 * http://voce.sourceforge.net                                           *
-* Copyright (C) 2005-2008                                               *
+* Copyright (C) 2005-2013                                               *
 * Tyler Streeter (http://www.tylerstreeter.net)                         *
 *                                                                       *
 * This library is free software; you can redistribute it and/or         *
