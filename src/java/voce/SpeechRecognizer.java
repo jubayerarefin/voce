@@ -74,12 +74,29 @@ public class SpeechRecognizer implements Runnable
 
 			if (!grammarName.equals(""))
 			{
+				if (grammarPath.equals(""))
+				{
+					grammarPath = "./";
+				}
+
+				// Convert the grammar path string to a file url string. This 
+				// seems to be necessary on windows.
+				String grammarURL = "";
+				try
+				{
+					grammarURL = new File(grammarPath).toURI().toURL().toString();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+
 				// This will create this componenent if it has not already 
 				// been created.
 				cm.lookup("jsgfGrammar");
 
 				// Setup in the user-defined grammar.
-				cm.setProperty("jsgfGrammar", "grammarLocation", grammarPath);
+				cm.setProperty("jsgfGrammar", "grammarLocation", grammarURL);
 				cm.setProperty("jsgfGrammar", "grammarName", grammarName);
 			}
 			else

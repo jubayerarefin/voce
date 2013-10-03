@@ -62,11 +62,6 @@ public class SpeechInterface
 
 		if (initRecognition)
 		{
-			if (grammarPath.equals(""))
-			{
-				grammarPath = "./";
-			}
-
 			// Always use the same config file.
 			String configFilename = "voce.config.xml";
 
